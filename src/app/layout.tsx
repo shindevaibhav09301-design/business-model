@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import AppShell from '@/components/layout/AppShell';
 
 export const metadata: Metadata = {
-  title: 'Local Intelligence Finder | AI-Powered Local Business & Institute Discovery',
-  description: 'Discover, analyze, and verify businesses, institutes, shops, and healthcare establishments in any city worldwide with source-grounded evidence.',
+  title: 'Local Intelligence Finder | AI-Powered Business Discovery & Intelligence',
+  description: 'Enterprise AI SaaS for local business discovery, verification, lead management, and geospatial intelligence across districts.',
 };
 
 export default function RootLayout({
@@ -23,10 +22,8 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-screen bg-[#050816] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
